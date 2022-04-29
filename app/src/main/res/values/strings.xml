@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhotoApp</string>
+    <string name="ItemLike">Likes</string>
+    <string name="ItemComment">Comments</string>
+    <string name="ItemView">Views</string>
+    <string name="ItemDownload">Downloads</string>
+    <string name="favourites">Favourites</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
