@@ -1,5 +1,6 @@
 # PhotosApp-MVVm
 A Simple Project that has been built to complete the Android Practice
+
 ## Topics Used
  - Retrofit
  - Caching
@@ -9,4 +10,11 @@ A Simple Project that has been built to complete the Android Practice
  - Animation
  - Recyclerview
  - View binding
- - Coroutines(to be)
+
+## Topics to Add
+ - Coroutines
+ - Navigation Component
+ - Testing
+ - Single Acttivity Architecture
+ - Jetpack compose
+ - Dependency Injection
