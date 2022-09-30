@@ -39,12 +39,12 @@ class PhotosActivity : AppCompatActivity(), PhotoRecyclerAdapter.OnItemClickList
         viewModel = ViewModelProvider(this, viewModelProvider)[PhotosActivityViewModel::class.java]
         binding.mainRv.adapter = adapter
 
-        viewModel.photosList.observe(this, Observer {
-            adapter.setDataset(it.hits)
-        })
-        viewModel.errorMsg.observe(this, Observer {
+        viewModel.photosList.observe(this) {
+            adapter.submitList(it.hits)
+        }
+        viewModel.errorMsg.observe(this) {
             UtilFunctions.showToast(this@PhotosActivity, it)
-        })
+        }
 
 //        dialog = Dialog(this)
 //        dialog.setContentView(R.layout.layout_popup)
@@ -54,7 +54,6 @@ class PhotosActivity : AppCompatActivity(), PhotoRecyclerAdapter.OnItemClickList
 //        imageView.setOnClickListener {
 //            dialog.dismiss()
 //        }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -128,5 +127,8 @@ class PhotosActivity : AppCompatActivity(), PhotoRecyclerAdapter.OnItemClickList
         }
     }
 
-
+    override fun onResume() {
+        viewModel.getAllPhotosFromAPI()
+        super.onResume()
+    }
 }

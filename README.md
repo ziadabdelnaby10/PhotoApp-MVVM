@@ -1,4 +1,4 @@
-# PhotosApp-MVVm
+# PhotosApp-MVVM
 A Simple Project that has been built to complete the Android Practice
 
 ## Topics Used
@@ -8,13 +8,13 @@ A Simple Project that has been built to complete the Android Practice
  - MVVM
  - Livedata
  - Animation
- - Recyclerview
- - View binding
+ - Recyclerview with Diffutil.itemCallback
+ - Data binding
+ - Coroutines
 
 ## Topics to Add
- - Coroutines
  - Navigation Component
  - Testing
- - Single Acttivity Architecture
+ - Single Activity Architecture
  - Jetpack compose
  - Dependency Injection

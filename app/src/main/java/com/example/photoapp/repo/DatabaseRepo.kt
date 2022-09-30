@@ -4,9 +4,9 @@ import com.example.photoapp.database.HitsDao
 import com.example.photoapp.model.HitEntity
 
 class DatabaseRepo(private val dao : HitsDao) {
-    fun getData() : List<HitEntity> = dao.loadAllPhotos()
+    suspend fun getData() : List<HitEntity> = dao.loadAllPhotos()
 
-    fun insertPhoto(hit : HitEntity) = dao.insertPhoto(hit)
+    suspend fun insertPhoto(hit : HitEntity) = dao.insertPhoto(hit)
 
-    fun deletePhoto(hit: HitEntity) = dao.deletePhoto(hit)
+    suspend fun deletePhoto(hit: HitEntity) = dao.deletePhoto(hit)
 }

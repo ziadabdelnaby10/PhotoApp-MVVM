@@ -6,12 +6,12 @@ import com.example.photoapp.model.HitEntity
 @Dao
 interface HitsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPhoto(hit: HitEntity)
+    suspend fun insertPhoto(hit: HitEntity)
 
     @Delete
-    fun deletePhoto(hit: HitEntity)
+    suspend fun deletePhoto(hit: HitEntity)
 
     @Query("SELECT * FROM hits")
-    fun loadAllPhotos(): List<HitEntity>
+    suspend fun loadAllPhotos(): List<HitEntity>
 
 }
